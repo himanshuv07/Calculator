@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/babcfe9518.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="shadow">
+        <div class="calculator">
+            <div id="box">
+                <h2>CALCULATOR</h2>
+            </div>
+            <div>
+                <input type="text" id="result" placeholder="">
+            </div>
+            <div class="buttons">
+                <button id="clear" onclick="clearResult()">C</button>
+                <button id="symbols" onclick="appendCharacter('%')">%</button>
+                <button id="symbols" onclick="appendCharacter('/')"><i class="fa-solid fa-divide"></i></button>
+                <button id="clear" onclick="deleteLastCharacter()"><i class="fa-sharp fa-solid fa-delete-left"></i></button>
+                <button onclick="appendCharacter('7')">7</button>
+                <button onclick="appendCharacter('8')">8</button>
+                <button onclick="appendCharacter('9')">9</button>
+                <button id="symbols" onclick="appendCharacter('*')"><i class="fa-solid fa-xmark"></i></button>
+                <button onclick="appendCharacter('4')">4</button>
+                <button onclick="appendCharacter('5')">5</button>
+                <button onclick="appendCharacter('6')">6</button>
+                <button id="symbols" onclick="appendCharacter('-')"><i class="fa-solid fa-minus"></i></button>
+                <button onclick="appendCharacter('1')">1</button>
+                <button onclick="appendCharacter('2')">2</button>
+                <button onclick="appendCharacter('3')">3</button>
+                <button id="symbols" onclick="appendCharacter('+')"><i class="fa-solid fa-plus"></i></button>
+                <button onclick="appendCharacter('00')">00</button>
+                <button onclick="appendCharacter('0')">0</button>
+                <button onclick="appendCharacter('.')">.</button>
+                <button id="equals" onclick="calculate()"><i class="fa-solid fa-equals"></i></button>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

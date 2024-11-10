@@ -1,0 +1,131 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(39, 39, 39);
+    overflow: hidden;
+}
+
+#box {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#box h2 {
+    box-sizing: content-box;
+    margin-top: -10px;
+    margin-bottom: auto;
+    color: white;
+    font-size: 25px;
+    font-weight: 100;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 10px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 20px #00b3ff,
+        0 0 20px #00b3ff;
+}
+
+.calculator {
+    background-color: #080707;
+    /* border: 10px solid #dddcdc; */
+    padding: 40px;
+    /* border-radius: 1px; */
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box;
+    /* box-shadow: 0 0 1px rgba(8, 8, 8, 0.1); */
+}
+
+input[type="text"] {
+    position:relative;
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    letter-spacing: 0.1em;
+    color: white;
+    background-color: black;
+    margin-top: 40px;
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 8px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 8px;
+}
+
+button {
+    color: #ccc;
+    background-color: #161616;
+    border: 0px;
+    border-radius: 100%;
+    cursor: pointer;
+    font-size: 21px;
+    padding: 20px;
+}
+
+button:hover {
+    background-color: #383838;
+    color: black;
+}
+
+#symbols{
+    color: #0000ff;
+}
+
+#clear{
+    color: red;
+}
+
+#equals{
+    color: rgb(22, 255, 22);
+}
+
+.shadow {
+    position: absolute;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin: 60px;
+    width: 400px;
+    height: 565px;
+    background: linear-gradient(0deg, #000, #262626);
+}
+
+.shadow:before,
+.shadow:after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: -2px;
+    left: -2px;
+    background: linear-gradient(90deg,#ff0000,#0000ff,#fa0404,#ffff00,#fb0094,#0000ff,#00ff00,#ffff00,#fb0094,#0000ff,#00ff00,#ffff00,#ff0000,#0000ff,#fa0404,#ffff00,#fb0094,#0000ff,#00ff00,#ffff00,#fb0094,#0000ff,#00ff00,#ffff00,#fb0094);
+    animation: animate 20s linear infinite;
+    background-size: 900%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+}
+.shadow:after{
+    inset: 0;
+    filter: blur(25px);
+}
+
+@keyframes animate{
+    0%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: 150% 0;
+    }
+    100%{
+        background-position: 0 0;
+    }
+}
