@@ -118,6 +118,24 @@ button:hover {
     filter: blur(25px);
 }
 
+.name {
+    font-size: smaller;
+    color: #fff;
+    position: relative;
+    top: 10px;
+    left: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-content: center;
+}
+.name>span{
+    color: red;
+    font-size: 20px;
+}
+
 @keyframes animate{
     0%{
         background-position: 0 0;
